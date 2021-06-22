@@ -15,7 +15,9 @@ public class DragAndDropPage extends AbstractPage{
     public DragAndDropPage dragAndDropImage(){
         WebElement element = driver.findElements(IMAGES_AT_DRIVE_LOCATOR).get(0);
         WebElement target = driver.findElement(BIN_BOX_LOCATOR);
+        highlightElement(BIN_BOX_LOCATOR);
         new Actions(driver).dragAndDrop(element, target).build().perform();
+        unHighlightElement(BIN_BOX_LOCATOR);
         return this;
     }
     public KeyBoardActionPage moveToKeyBoardActionPage(){

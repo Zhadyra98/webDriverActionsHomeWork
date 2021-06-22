@@ -17,7 +17,9 @@ public class LoginPage extends AbstractPage{
         return this;
     }
     public LoginPage clickOnLoginButton(){
+        highlightElement(LOGIN_BUTTON_LOCATOR);
         driver.findElement(LOGIN_BUTTON_LOCATOR).click();
+        unHighlightElement(LOGIN_BUTTON_LOCATOR);
         return this;
     }
     public LoginPage enterPassword(String password){
@@ -25,7 +27,9 @@ public class LoginPage extends AbstractPage{
         return this;
     }
     public DragAndDropPage finalLogin(){
+        highlightElement(FINAL_LOGIN_BUTTON_LOCATOR);
         driver.findElement(FINAL_LOGIN_BUTTON_LOCATOR).click();
+        unHighlightElement(FINAL_LOGIN_BUTTON_LOCATOR);
         return new DragAndDropPage(driver);
     }
 }

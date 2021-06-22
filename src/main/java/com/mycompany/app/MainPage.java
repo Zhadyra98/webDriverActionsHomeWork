@@ -17,32 +17,9 @@ public class MainPage extends AbstractPage{
         return this;
     }
     public LoginPage clickOnEnterButton(){
+        highlightElement(LOGIN_BUTTON_LINK_LOCATOR);
         driver.findElement(LOGIN_BUTTON_LINK_LOCATOR).click();
         return new LoginPage(driver);
     }
 
-
-    /*public DroppablePage openDroppableLink() {
-        highlightElement(DROPPABLE_LINK_LOCATOR);
-        Screenshoter.takeScreenshot();
-        driver.findElement(DROPPABLE_LINK_LOCATOR).click();
-        unHighlightElement(DROPPABLE_LINK_LOCATOR);
-        return new DroppablePage();
-    }
-
-    public ResizablePage openResizableLink() {
-        highlightElement(RESIZABLE_LINK_LOCATOR);
-        Screenshoter.takeScreenshot();
-        driver.findElement(RESIZABLE_LINK_LOCATOR).click();
-        unHighlightElement(RESIZABLE_LINK_LOCATOR);
-        return new ResizablePage();
-    }
-
-    public SelectablePage openSelectableLink() {
-        highlightElement(SELECTABLE_LINK_LOCATOR);
-        Screenshoter.takeScreenshot();
-        driver.findElement(SELECTABLE_LINK_LOCATOR).click();
-        unHighlightElement(SELECTABLE_LINK_LOCATOR);
-        return new SelectablePage();
-    }*/
 }
