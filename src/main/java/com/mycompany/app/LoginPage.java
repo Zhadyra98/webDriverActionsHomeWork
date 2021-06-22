@@ -12,7 +12,7 @@ public class LoginPage extends AbstractPage{
     public LoginPage(WebDriver driver){
         super(driver);
     }
-    public LoginPage enterTelephoneNumber(String telephoneNumber){
+    public LoginPage enterLogin(String telephoneNumber){
         driver.findElement(INPUT_LOGIN_LABEL_LOCATOR).sendKeys(telephoneNumber);
         return this;
     }
