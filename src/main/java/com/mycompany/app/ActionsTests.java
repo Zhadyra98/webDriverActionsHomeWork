@@ -30,6 +30,6 @@ public class ActionsTests {
     @Test
     public void keyBoardActionTest(){
         LoginPage loginPage = new MainPage(driver).open().clickOnEnterButton().enterLogin("z.oralkhanova").clickOnLoginButton().enterPassword("Asd123456789+*");
-        DragAndDropPage dragAndDropPage = loginPage.finalLogin();
+        KeyBoardActionPage keyBoardActionPage = loginPage.finalLogin().moveToKeyBoardActionPage().moveToDraftTabUsingKeyBoardAction();
     }
 }
