@@ -1,9 +1,10 @@
-package com.mycompany.app;
+package com.mycompany.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import reporting.MyLogger;
 
 public class DragAndDropPage extends AbstractPage{
     private static final By IMAGES_AT_DRIVE_LOCATOR =  By.xpath("//*[@id=\"app\"]/div/div[4]/div[1]/div/div[3]/div/*");
@@ -18,6 +19,7 @@ public class DragAndDropPage extends AbstractPage{
         highlightElement(BIN_BOX_LOCATOR);
         new Actions(driver).dragAndDrop(element, target).build().perform();
         unHighlightElement(BIN_BOX_LOCATOR);
+        MyLogger.info("Successfully dragged a square!");
         return this;
     }
     public KeyBoardActionPage moveToKeyBoardActionPage(){

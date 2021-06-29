@@ -1,6 +1,7 @@
-package com.mycompany.app;
-
-
+import com.mycompany.pages.DragAndDropPage;
+import com.mycompany.pages.KeyBoardActionPage;
+import com.mycompany.pages.LoginPage;
+import com.mycompany.pages.MainPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -8,7 +9,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class ActionsTests {

@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package com.mycompany.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
