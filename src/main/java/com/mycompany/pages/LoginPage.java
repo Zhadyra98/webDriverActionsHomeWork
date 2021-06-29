@@ -3,6 +3,7 @@ package com.mycompany.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import reporting.MyLogger;
 
 public class LoginPage extends AbstractPage{
     private static final By INPUT_LOGIN_LABEL_LOCATOR = By.xpath("//input[@placeholder='Телефон или почта']");
@@ -20,6 +21,7 @@ public class LoginPage extends AbstractPage{
         highlightElement(LOGIN_BUTTON_LOCATOR);
         driver.findElement(LOGIN_BUTTON_LOCATOR).click();
         unHighlightElement(LOGIN_BUTTON_LOCATOR);
+        MyLogger.info("Clicking on login button");
         return this;
     }
     public LoginPage enterPassword(String password){

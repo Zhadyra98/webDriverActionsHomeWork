@@ -24,6 +24,7 @@ public class DragAndDropPage extends AbstractPage{
     }
     public KeyBoardActionPage moveToKeyBoardActionPage(){
         driver.findElement(EMAIL_LINK_TAB_LOCATOR).click();
+        MyLogger.info("Successfully directed to keyboard action page");
         return new KeyBoardActionPage(driver);
     }
 }
